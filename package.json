@@ -1,0 +1,27 @@
+{
+	"name": "mp3tag-extract-lyric-tool",
+	"version": "0.1.0",
+	"description": "",
+	"author": "m4rch",
+	"license": "AGPL-3.0-only",
+	"main": "src/index.js",
+	"keywords": [
+		"m4rch",
+		"mp3tag",
+		"lyrics"
+	],
+	"scripts": {
+		"bundle": "rm -rf dist dist.zip dist.7z && vite build && sed -i \"1i#!/usr/bin/env node\\n\" dist/index.js && node scripts/bundle.js"
+	},
+	"dependencies": {
+		"music-metadata": "^7.12.3",
+		"sade": "^1.8.1"
+	},
+	"devDependencies": {
+		"7zip-min": "^1.4.2",
+		"cpr": "^3.0.1",
+		"vite": "^2.9.7"
+	},
+	"type": "module",
+	"private": true
+}
