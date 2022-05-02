@@ -15,5 +15,5 @@ async function main ( mp3Path, filePath ) {
 	const lyrics = await getLyrics(mp3Path)
 	console.log({ lyrics })
 
-	await writeFile(filePath, lyrics)
+	await writeFile(filePath, lyrics || "")
 }

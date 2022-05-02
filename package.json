@@ -11,7 +11,7 @@
 		"lyrics"
 	],
 	"scripts": {
-		"bundle": "rm -rf dist dist.zip dist.7z && vite build && sed -i \"1i#!/usr/bin/env node\\n\" dist/index.js && node scripts/bundle.js"
+		"bundle": "rm -rf release dist dist.zip dist.7z && vite build && sed -i \"1i#!/usr/bin/env node\\n\" dist/index.js && node scripts/bundle.js"
 	},
 	"dependencies": {
 		"music-metadata": "^7.12.3",
