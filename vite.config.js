@@ -1,5 +1,5 @@
 import { defineConfig } from "vite"
-import { builtinModules } from "module"
+import { builtinModules } from "node:module"
 
 export default defineConfig({
 	mode: process.env.MODE,
@@ -10,7 +10,7 @@ export default defineConfig({
 		minify: true,
 		lib: {
 			entry: "src/index.js",
-			formats: [ "esm" ],
+			formats: [ "cjs" ],
 		},
 		rollupOptions: {
 			external: [

@@ -13,7 +13,7 @@ async function main () {
 		author: "m4rch",
 		license: "AGPL-3.0-only",
 		main: "index.js",
-		type: "module",
+		type: "commonjs",
 		private: true
 	}
 	await writeFile("dist/package.json", JSON.stringify(pkg, null, "\t") + "\n")
@@ -21,9 +21,10 @@ async function main () {
 	await copyFile("scripts/index.bat", "dist/index.bat")
 
 	await copyFolder("dist", "extract-lyrics")
-	if (existsSync("release")) await rm("release", { recursive: true })
 
+	if (existsSync("release")) await rm("release", { recursive: true })
 	await mkdir("release")
+
 	await compress("extract-lyrics", "release/extract-lyrics.zip")
 	await compress("extract-lyrics", "release/extract-lyrics.7z")
 
