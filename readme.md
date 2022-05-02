@@ -7,8 +7,8 @@
 3. download the newest release
 4. unzip and put the path into a directory, where you can find it
 5. open mp3tag and add a new tool and give it a name
-6. add the path to the *index.bat* file into the path section
-7. add two arguments: the first one being the the path of the mp3 file, `"%_path%"`, the second one being the path to the text file where you want to have the lyrics, for example `"%_folderpath%%_filename%.txt"`
+6. add the path to the *index.bat* file into the Path field
+7. add two arguments: the first one being the the path of the mp3 file, `"%_path%"`, the second one being the path to the text file where you want to have the lyrics, for example `"%_folderpath%%_filename%.txt"` (which would result in the Parameter field to look like `"%_path%" "%_folderpath%%_filename%.txt"`)
 8. **done!**
 
 ## build yourself
